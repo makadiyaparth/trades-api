@@ -3,6 +3,7 @@ package com.pm.trades.entity;
 import com.pm.trades.enums.OptionsType;
 import com.pm.trades.enums.TransactionType;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -13,7 +14,8 @@ import java.time.LocalDate;
 @Data
 @Entity
 @Table(name = "options")
-public class OptionsEntity {
+@EqualsAndHashCode(callSuper = false)
+public class OptionsEntity extends AuditingEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
