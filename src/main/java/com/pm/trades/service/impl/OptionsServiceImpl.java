@@ -11,6 +11,7 @@ import com.pm.trades.service.OptionsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -35,8 +36,8 @@ public class OptionsServiceImpl implements OptionsService
     }
 
     @Override
-    public List<OptionsDTO> findAll() {
-        List<OptionsEntity> optionsEntities = optionsRepository.findAll();
+    public List<OptionsDTO> findAll(LocalDate date) {
+        List<OptionsEntity> optionsEntities = optionsRepository.findByCreatedDateTimeBetween(date.atStartOfDay(), date.plusDays(1).atStartOfDay());
         return optionsEntities.stream().map(optionsMapper::toDTO).collect(Collectors.toList());
     }
 

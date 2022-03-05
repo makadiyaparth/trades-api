@@ -4,9 +4,11 @@ import com.pm.trades.dto.OptionsDTO;
 import com.pm.trades.dto.OptionsInDTO;
 import com.pm.trades.service.OptionsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -21,8 +23,8 @@ public class OptionsController {
     }
 
     @GetMapping
-    public List<OptionsDTO> findAll() {
-        return optionsService.findAll();
+    public List<OptionsDTO> findAll(@RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
+        return optionsService.findAll(date);
     }
 
     @PutMapping("/{id}")
