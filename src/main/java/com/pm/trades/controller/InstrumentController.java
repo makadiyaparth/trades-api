@@ -1,7 +1,7 @@
 package com.pm.trades.controller;
 
-import com.pm.trades.dto.InstrumentDTO;
-import com.pm.trades.dto.InstrumentInDTO;
+import com.pm.trades.dto.instrument.InstrumentDTO;
+import com.pm.trades.dto.instrument.InstrumentInDTO;
 import com.pm.trades.service.InstrumentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

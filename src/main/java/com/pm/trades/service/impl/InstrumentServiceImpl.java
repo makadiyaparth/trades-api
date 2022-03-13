@@ -1,7 +1,7 @@
 package com.pm.trades.service.impl;
 
-import com.pm.trades.dto.InstrumentDTO;
-import com.pm.trades.dto.InstrumentInDTO;
+import com.pm.trades.dto.instrument.InstrumentDTO;
+import com.pm.trades.dto.instrument.InstrumentInDTO;
 import com.pm.trades.entity.InstrumentEntity;
 import com.pm.trades.exception.NotFoundException;
 import com.pm.trades.mapper.InstrumentMapper;

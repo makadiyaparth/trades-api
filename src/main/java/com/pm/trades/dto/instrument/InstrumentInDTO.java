@@ -1,4 +1,4 @@
-package com.pm.trades.dto;
+package com.pm.trades.dto.instrument;
 
 import lombok.Data;
 

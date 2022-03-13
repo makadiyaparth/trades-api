@@ -1,7 +1,7 @@
 package com.pm.trades.service;
 
-import com.pm.trades.dto.InstrumentDTO;
-import com.pm.trades.dto.InstrumentInDTO;
+import com.pm.trades.dto.instrument.InstrumentDTO;
+import com.pm.trades.dto.instrument.InstrumentInDTO;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package com.pm.trades.service;
 
-import com.pm.trades.dto.OptionsDTO;
-import com.pm.trades.dto.OptionsInDTO;
+import com.pm.trades.dto.options.OptionsDTO;
+import com.pm.trades.dto.options.OptionsInDTO;
 
 import java.time.LocalDate;
 import java.util.List;

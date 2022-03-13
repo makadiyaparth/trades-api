@@ -1,7 +1,7 @@
 package com.pm.trades.mapper;
 
-import com.pm.trades.dto.OptionsDTO;
-import com.pm.trades.dto.OptionsInDTO;
+import com.pm.trades.dto.options.OptionsDTO;
+import com.pm.trades.dto.options.OptionsInDTO;
 import com.pm.trades.entity.OptionsEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

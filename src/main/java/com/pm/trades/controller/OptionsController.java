@@ -1,7 +1,7 @@
 package com.pm.trades.controller;
 
-import com.pm.trades.dto.OptionsDTO;
-import com.pm.trades.dto.OptionsInDTO;
+import com.pm.trades.dto.options.OptionsDTO;
+import com.pm.trades.dto.options.OptionsInDTO;
 import com.pm.trades.service.OptionsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
