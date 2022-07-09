@@ -8,5 +8,7 @@ import java.util.List;
 
 @Repository
 public interface StockRepository extends JpaRepository<StockEntity, Integer> {
-    List<StockEntity> findByInstrumentEntityNameStartingWith(String name);
+    List<StockEntity> findByInstrumentEntityNameContainingIgnoreCaseOrderByTransactionDateDesc(String name);
+
+    List<StockEntity> findByOrderByTransactionDateDesc();
 }

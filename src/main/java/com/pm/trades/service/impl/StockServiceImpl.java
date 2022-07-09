@@ -40,9 +40,9 @@ public class StockServiceImpl implements StockService
         List<StockEntity> stockEntities;
 
         if (name != null && !name.trim().equals("")) {
-            stockEntities = stockRepository.findByInstrumentEntityNameStartingWith(name);
+            stockEntities = stockRepository.findByInstrumentEntityNameContainingIgnoreCaseOrderByTransactionDateDesc(name);
         } else {
-            stockEntities = stockRepository.findAll();
+            stockEntities = stockRepository.findByOrderByTransactionDateDesc();
         }
 
         return stockEntities.stream().map(stockMapper::toDTO).collect(Collectors.toList());
